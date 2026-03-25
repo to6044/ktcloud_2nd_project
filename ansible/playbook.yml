@@ -1,0 +1,10 @@
+---
+- name: 로컬 k3s 및 필수 인프라 구축
+  hosts: local
+  become: yes 
+  roles:
+    - prerequisites
+    - k3s
+    - database
+    - monitoring
+    - app_deploy

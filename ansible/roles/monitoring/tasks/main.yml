@@ -1,0 +1,19 @@
+---
+- name: Add Prometheus Helm repository
+  kubernetes.core.helm_repository:
+    name: prometheus-community
+    repo_url: https://prometheus-community.github.io/helm-charts
+
+- name: Deploy kube-prometheus-stack
+  kubernetes.core.helm:
+    name: monitoring
+    chart_ref: prometheus-community/kube-prometheus-stack
+    release_namespace: monitoring
+    create_namespace: true
+    kubeconfig: /home/jazzfact/.kube/config 
+    values:
+      grafana:
+        adminPassword: admin
+      prometheus-node-exporter:
+        hostRootFsMount:
+          enabled: false
