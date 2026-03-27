@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAMESPACE="k8s.io"
-BACKEND_IMAGE="docker.io/ktcloud7/backend:v1.0.4"
+BACKEND_IMAGE="docker.io/ktcloud7/backend:v1.0.7"
 FRONTEND_IMAGE="docker.io/ktcloud7/frontend:v1.0.5"
 
 echo "🛠️ [$BACKEND_IMAGE] 이미지 빌드 시작..."

@@ -19,12 +19,12 @@ DB_LATENCY = Histogram(
 )
 
 # --- 2. 데이터베이스 연결 설정 ---
-DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "postgres")    # 나중에 시크릿 사용 예정
-DB_HOST = os.getenv("DB_HOST", "local-db-postgresql.db.svc.cluster.local")
+DB_USER = os.getenv("DB_USER", "root")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "root")    # 나중에 시크릿 사용 예정
+DB_HOST = os.getenv("DB_HOST", "mysql.db.svc.cluster.local")
 DB_NAME = os.getenv("DB_NAME", "hybrid_db")
 
-DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:5432/{DB_NAME}"
+DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}"
 
 engine = create_engine(
     DATABASE_URL,

@@ -3,5 +3,5 @@ uvicorn
 prometheus-fastapi-instrumentator 
 prometheus-client 
 sqlalchemy
-psycopg2-binary # PostgreSQL 드라이버
-pymysql # MySQL 드라이버
+pymysql
+cryptography

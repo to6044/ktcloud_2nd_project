@@ -1,6 +1,6 @@
 backend:
   image: "docker.io/ktcloud7/backend"
-  tag: "v1.0.4"
+  tag: "v1.0.7"
   pullPolicy: IfNotPresent
   port: 8000
 

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: "{{ mysql_namespace }}"
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: {{ mysql_port }}
+      targetPort: {{ mysql_port }}
+  type: ClusterIP

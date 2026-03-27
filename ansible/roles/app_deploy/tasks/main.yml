@@ -12,7 +12,7 @@
 # 2. Helm Chart 템플릿 폴더를 타겟 노드의 임시 경로로 복사
 - name: Copy app-chart to target node
   ansible.builtin.copy:
-    src: "{{ playbook_dir }}/../application/app-chart/"
+    src: app-chart/
     dest: /tmp/app-chart/
     mode: '0755'
 
